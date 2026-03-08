@@ -5,7 +5,7 @@ My initial intention was to really make a desktop pet, but then eventually it wo
 [You can download and play the game from itch.io](https://sessizleylek.itch.io/my-fluffy-pet).
 
 I know the scripting in the code is very poor but i was not sure how this was gonna turn out so didn't deal with a proper refactor.
-If you are looking at this repo to get inspired, i would suggest ignoring this and trying something like this:
+If you are looking at this repo to get inspired, i would suggest ignoring the code in this repo and trying something like this below:
 ```
 EventId : distinct int
 
