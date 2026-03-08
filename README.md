@@ -12,8 +12,8 @@ EventId : distinct int
 ScriptEvent : struct {
     on_update: proc(),
     on_complete: proc(), 
-    condition: proc() -> bool,  // You can also make this an array to have multiple end conditions and routes
-    next_event_id: EventId,
+    condition: proc() -> bool,  // You can also make this an array to have 
+    next_event_id: EventId,     // multiple end conditions and routes
 }
 
 EventTimeline : struct {
@@ -26,7 +26,10 @@ update_timeline :: proc() {
     event := timeline.events[timeline.current_event_id]
 
     event.on_update()
-    if event.condition() {  // If you decided to have multiple end conditions, check them all in a loop and break after first condition met
+
+    // If you decided to have multiple end conditions,
+    // check them all in a loop and break after first condition met
+    if event.condition() {  
         event.on_complete()
         timeline.current_event_id = event.next_event_id
     }
